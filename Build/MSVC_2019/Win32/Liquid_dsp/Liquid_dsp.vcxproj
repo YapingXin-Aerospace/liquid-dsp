@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{58164e33-bc04-4d59-aeca-80b1516d8372}</ProjectGuid>
+    <RootNamespace>Liquid_dsp</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Win32\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Win32\IntDir\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Win32\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Win32\IntDir\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Win32\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Win32\IntDir\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Win32\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Win32\IntDir\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <CompileAs>CompileAsC</CompileAs>
+      <AdditionalIncludeDirectories>..\..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <CompileAs>CompileAsC</CompileAs>
+      <AdditionalIncludeDirectories>..\..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <CompileAs>CompileAsC</CompileAs>
+      <AdditionalIncludeDirectories>..\..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <CompileAs>CompileAsC</CompileAs>
+      <AdditionalIncludeDirectories>..\..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\src\agc\src\agc.c" />
+    <ClCompile Include="..\..\..\..\src\agc\src\agc_crcf.c" />
+    <ClCompile Include="..\..\..\..\src\agc\src\agc_rrrf.c" />
+    <ClCompile Include="..\..\..\..\src\audio\src\cvsd.c" />
+    <ClCompile Include="..\..\..\..\src\buffer\src\buffer.c" />
+    <ClCompile Include="..\..\..\..\src\buffer\src\buffercf.c" />
+    <ClCompile Include="..\..\..\..\src\buffer\src\bufferf.c" />
+    <ClCompile Include="..\..\..\..\src\buffer\src\cbuffer.c" />
+    <ClCompile Include="..\..\..\..\src\buffer\src\wdelay.c" />
+    <ClCompile Include="..\..\..\..\src\buffer\src\window.c" />
+    <ClCompile Include="..\..\..\..\src\channel\src\channel.c" />
+    <ClCompile Include="..\..\..\..\src\channel\src\channel_cccf.c" />
+    <ClCompile Include="..\..\..\..\src\channel\src\tvmpch.c" />
+    <ClCompile Include="..\..\..\..\src\dotprod\src\dotprod.c" />
+    <ClCompile Include="..\..\..\..\src\dotprod\src\dotprod_cccf.c" />
+    <ClCompile Include="..\..\..\..\src\dotprod\src\dotprod_cccf.mmx.c" />
+    <ClCompile Include="..\..\..\..\src\dotprod\src\dotprod_cccf.neon.c" />
+    <ClCompile Include="..\..\..\..\src\dotprod\src\dotprod_crcf.av.c" />
+    <ClCompile Include="..\..\..\..\src\dotprod\src\dotprod_crcf.c" />
+    <ClCompile Include="..\..\..\..\src\dotprod\src\dotprod_crcf.mmx.c" />
+    <ClCompile Include="..\..\..\..\src\dotprod\src\dotprod_crcf.neon.c" />
+    <ClCompile Include="..\..\..\..\src\dotprod\src\dotprod_rrrf.av.c" />
+    <ClCompile Include="..\..\..\..\src\dotprod\src\dotprod_rrrf.c" />
+    <ClCompile Include="..\..\..\..\src\dotprod\src\dotprod_rrrf.mmx.c" />
+    <ClCompile Include="..\..\..\..\src\dotprod\src\dotprod_rrrf.neon.c" />
+    <ClCompile Include="..\..\..\..\src\dotprod\src\dotprod_rrrf.sse4.c" />
+    <ClCompile Include="..\..\..\..\src\dotprod\src\sumsq.c" />
+    <ClCompile Include="..\..\..\..\src\dotprod\src\sumsq.mmx.c" />
+    <ClCompile Include="..\..\..\..\src\equalization\src\eqlms.c" />
+    <ClCompile Include="..\..\..\..\src\equalization\src\eqrls.c" />
+    <ClCompile Include="..\..\..\..\src\equalization\src\equalizer_cccf.c" />
+    <ClCompile Include="..\..\..\..\src\equalization\src\equalizer_rrrf.c" />
+    <ClCompile Include="..\..\..\..\src\fec\src\crc.c" />
+    <ClCompile Include="..\..\..\..\src\fec\src\c_ones_mod2.c" />
+    <ClCompile Include="..\..\..\..\src\fec\src\c_ones_mod2_gentab.c" />
+    <ClCompile Include="..\..\..\..\src\fec\src\fec.c" />
+    <ClCompile Include="..\..\..\..\src\fec\src\fec_conv.c" />
+    <ClCompile Include="..\..\..\..\src\fec\src\fec_conv_pmatrix.c" />
+    <ClCompile Include="..\..\..\..\src\fec\src\fec_conv_poly.c" />
+    <ClCompile Include="..\..\..\..\src\fec\src\fec_conv_punctured.c" />
+    <ClCompile Include="..\..\..\..\src\fec\src\fec_golay2412.c" />
+    <ClCompile Include="..\..\..\..\src\fec\src\fec_hamming128.c" />
+    <ClCompile Include="..\..\..\..\src\fec\src\fec_hamming128_gentab.c" />
+    <ClCompile Include="..\..\..\..\src\fec\src\fec_hamming1511.c" />
+    <ClCompile Include="..\..\..\..\src\fec\src\fec_hamming3126.c" />
+    <ClCompile Include="..\..\..\..\src\fec\src\fec_hamming74.c" />
+    <ClCompile Include="..\..\..\..\src\fec\src\fec_hamming84.c" />
+    <ClCompile Include="..\..\..\..\src\fec\src\fec_pass.c" />
+    <ClCompile Include="..\..\..\..\src\fec\src\fec_rep3.c" />
+    <ClCompile Include="..\..\..\..\src\fec\src\fec_rep5.c" />
+    <ClCompile Include="..\..\..\..\src\fec\src\fec_rs.c" />
+    <ClCompile Include="..\..\..\..\src\fec\src\fec_secded2216.c" />
+    <ClCompile Include="..\..\..\..\src\fec\src\fec_secded3932.c" />
+    <ClCompile Include="..\..\..\..\src\fec\src\fec_secded7264.c" />
+    <ClCompile Include="..\..\..\..\src\fec\src\interleaver.c" />
+    <ClCompile Include="..\..\..\..\src\fec\src\packetizer.c" />
+    <ClCompile Include="..\..\..\..\src\fec\src\sumproduct.c" />
+    <ClCompile Include="..\..\..\..\src\fft\src\asgram.c" />
+    <ClCompile Include="..\..\..\..\src\fft\src\dct_execute.c" />
+    <ClCompile Include="..\..\..\..\src\fft\src\fct_execute.c" />
+    <ClCompile Include="..\..\..\..\src\fft\src\fftf.c" />
+    <ClCompile Include="..\..\..\..\src\fft\src\fft_common.c" />
+    <ClCompile Include="..\..\..\..\src\fft\src\fft_dft.c" />
+    <ClCompile Include="..\..\..\..\src\fft\src\fft_mixed_radix.c" />
+    <ClCompile Include="..\..\..\..\src\fft\src\fft_r2r_1d.c" />
+    <ClCompile Include="..\..\..\..\src\fft\src\fft_rader.c" />
+    <ClCompile Include="..\..\..\..\src\fft\src\fft_rader2.c" />
+    <ClCompile Include="..\..\..\..\src\fft\src\fft_radix2.c" />
+    <ClCompile Include="..\..\..\..\src\fft\src\fft_utilities.c" />
+    <ClCompile Include="..\..\..\..\src\fft\src\spgram.c" />
+    <ClCompile Include="..\..\..\..\src\fft\src\spgramcf.c" />
+    <ClCompile Include="..\..\..\..\src\fft\src\spgramf.c" />
+    <ClCompile Include="..\..\..\..\src\fft\src\spwaterfall.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\autocorr.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\bessel.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\bilinear.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\butter.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\cheby1.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\cheby2.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\ellip.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\fftfilt.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\filter_cccf.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\filter_crcf.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\filter_rrrf.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\firdecim.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\firdes.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\firdespm.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\firfarrow.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\firfilt.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\firhilb.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\firinterp.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\firpfb.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\fnyquist.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\gmsk.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\group_delay.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\hM3.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\iirdecim.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\iirdes.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\iirdes.pll.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\iirfilt.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\iirfiltsos.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\iirhilb.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\iirinterp.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\lpc.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\msresamp.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\msresamp2.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\ordfilt.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\rcos.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\resamp.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\resamp.fixed.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\resamp2.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\rkaiser.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\rrcos.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\rresamp.c" />
+    <ClCompile Include="..\..\..\..\src\filter\src\symsync.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\bpacketgen.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\bpacketsync.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\bpresync.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\bpresync_cccf.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\bsync.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\bsync_cccf.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\bsync_crcf.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\bsync_rrrf.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\detector_cccf.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\dsssframegen.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\dsssframesync.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\flexframegen.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\flexframesync.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\framedatastats.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\framegen64.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\framesync64.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\framesyncstats.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\fskframegen.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\fskframesync.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\gmskframegen.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\gmskframesync.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\msource.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\msourcecf.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\ofdmflexframegen.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\ofdmflexframesync.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\presync.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\presync_cccf.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\qdetector_cccf.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\qpacketmodem.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\qpilotgen.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\qpilotsync.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\qsource.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\symstream.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\symstreamcf.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\symtrack.c" />
+    <ClCompile Include="..\..\..\..\src\framing\src\symtrack_cccf.c" />
+    <ClCompile Include="..\..\..\..\src\libliquid.c" />
+    <ClCompile Include="..\..\..\..\src\math\src\math.bessel.c" />
+    <ClCompile Include="..\..\..\..\src\math\src\math.c" />
+    <ClCompile Include="..\..\..\..\src\math\src\math.complex.c" />
+    <ClCompile Include="..\..\..\..\src\math\src\math.gamma.c" />
+    <ClCompile Include="..\..\..\..\src\math\src\math.trig.c" />
+    <ClCompile Include="..\..\..\..\src\math\src\modular_arithmetic.c" />
+    <ClCompile Include="..\..\..\..\src\math\src\poly.c" />
+    <ClCompile Include="..\..\..\..\src\math\src\poly.common.c" />
+    <ClCompile Include="..\..\..\..\src\math\src\poly.expand.c" />
+    <ClCompile Include="..\..\..\..\src\math\src\poly.findroots.c" />
+    <ClCompile Include="..\..\..\..\src\math\src\poly.lagrange.c" />
+    <ClCompile Include="..\..\..\..\src\math\src\polyc.c" />
+    <ClCompile Include="..\..\..\..\src\math\src\polycf.c" />
+    <ClCompile Include="..\..\..\..\src\math\src\polyf.c" />
+    <ClCompile Include="..\..\..\..\src\math\src\windows.c" />
+    <ClCompile Include="..\..\..\..\src\matrix\src\matrix.base.c" />
+    <ClCompile Include="..\..\..\..\src\matrix\src\matrix.c" />
+    <ClCompile Include="..\..\..\..\src\matrix\src\matrix.cgsolve.c" />
+    <ClCompile Include="..\..\..\..\src\matrix\src\matrix.chol.c" />
+    <ClCompile Include="..\..\..\..\src\matrix\src\matrix.gramschmidt.c" />
+    <ClCompile Include="..\..\..\..\src\matrix\src\matrix.inv.c" />
+    <ClCompile Include="..\..\..\..\src\matrix\src\matrix.linsolve.c" />
+    <ClCompile Include="..\..\..\..\src\matrix\src\matrix.ludecomp.c" />
+    <ClCompile Include="..\..\..\..\src\matrix\src\matrix.math.c" />
+    <ClCompile Include="..\..\..\..\src\matrix\src\matrix.qrdecomp.c" />
+    <ClCompile Include="..\..\..\..\src\matrix\src\matrixc.c" />
+    <ClCompile Include="..\..\..\..\src\matrix\src\matrixcf.c" />
+    <ClCompile Include="..\..\..\..\src\matrix\src\matrixf.c" />
+    <ClCompile Include="..\..\..\..\src\matrix\src\smatrix.c" />
+    <ClCompile Include="..\..\..\..\src\matrix\src\smatrix.common.c" />
+    <ClCompile Include="..\..\..\..\src\matrix\src\smatrixb.c" />
+    <ClCompile Include="..\..\..\..\src\matrix\src\smatrixf.c" />
+    <ClCompile Include="..\..\..\..\src\matrix\src\smatrixi.c" />
+    <ClCompile Include="..\..\..\..\src\modem\src\ampmodem.c" />
+    <ClCompile Include="..\..\..\..\src\modem\src\cpfskdem.c" />
+    <ClCompile Include="..\..\..\..\src\modem\src\cpfskmod.c" />
+    <ClCompile Include="..\..\..\..\src\modem\src\freqdem.c" />
+    <ClCompile Include="..\..\..\..\src\modem\src\freqmod.c" />
+    <ClCompile Include="..\..\..\..\src\modem\src\fskdem.c" />
+    <ClCompile Include="..\..\..\..\src\modem\src\fskmod.c" />
+    <ClCompile Include="..\..\..\..\src\modem\src\gmskdem.c" />
+    <ClCompile Include="..\..\..\..\src\modem\src\gmskmod.c" />
+    <ClCompile Include="..\..\..\..\src\modem\src\modemf.c" />
+    <ClCompile Include="..\..\..\..\src\modem\src\modem_apsk.c" />
+    <ClCompile Include="..\..\..\..\src\modem\src\modem_apsk_const.c" />
+    <ClCompile Include="..\..\..\..\src\modem\src\modem_arb.c" />
+    <ClCompile Include="..\..\..\..\src\modem\src\modem_arb_const.c" />
+    <ClCompile Include="..\..\..\..\src\modem\src\modem_ask.c" />
+    <ClCompile Include="..\..\..\..\src\modem\src\modem_bpsk.c" />
+    <ClCompile Include="..\..\..\..\src\modem\src\modem_common.c" />
+    <ClCompile Include="..\..\..\..\src\modem\src\modem_dpsk.c" />
+    <ClCompile Include="..\..\..\..\src\modem\src\modem_ook.c" />
+    <ClCompile Include="..\..\..\..\src\modem\src\modem_psk.c" />
+    <ClCompile Include="..\..\..\..\src\modem\src\modem_qam.c" />
+    <ClCompile Include="..\..\..\..\src\modem\src\modem_qpsk.c" />
+    <ClCompile Include="..\..\..\..\src\modem\src\modem_sqam128.c" />
+    <ClCompile Include="..\..\..\..\src\modem\src\modem_sqam32.c" />
+    <ClCompile Include="..\..\..\..\src\modem\src\modem_utilities.c" />
+    <ClCompile Include="..\..\..\..\src\multichannel\src\firpfbch.c" />
+    <ClCompile Include="..\..\..\..\src\multichannel\src\firpfbch2.c" />
+    <ClCompile Include="..\..\..\..\src\multichannel\src\firpfbchr.c" />
+    <ClCompile Include="..\..\..\..\src\multichannel\src\firpfbch_cccf.c" />
+    <ClCompile Include="..\..\..\..\src\multichannel\src\firpfbch_crcf.c" />
+    <ClCompile Include="..\..\..\..\src\multichannel\src\firpfbch_old.c" />
+    <ClCompile Include="..\..\..\..\src\multichannel\src\ofdmframe.common.c" />
+    <ClCompile Include="..\..\..\..\src\multichannel\src\ofdmframegen.c" />
+    <ClCompile Include="..\..\..\..\src\multichannel\src\ofdmframesync.c" />
+    <ClCompile Include="..\..\..\..\src\nco\src\nco.c" />
+    <ClCompile Include="..\..\..\..\src\nco\src\nco.utilities.c" />
+    <ClCompile Include="..\..\..\..\src\nco\src\nco_crcf.c" />
+    <ClCompile Include="..\..\..\..\src\nco\src\synth.c" />
+    <ClCompile Include="..\..\..\..\src\nco\src\synth_crcf.c" />
+    <ClCompile Include="..\..\..\..\src\optim\src\chromosome.c" />
+    <ClCompile Include="..\..\..\..\src\optim\src\gasearch.c" />
+    <ClCompile Include="..\..\..\..\src\optim\src\gradsearch.c" />
+    <ClCompile Include="..\..\..\..\src\optim\src\optim.common.c" />
+    <ClCompile Include="..\..\..\..\src\optim\src\qnsearch.c" />
+    <ClCompile Include="..\..\..\..\src\optim\src\utilities.c" />
+    <ClCompile Include="..\..\..\..\src\quantization\src\compand.c" />
+    <ClCompile Include="..\..\..\..\src\quantization\src\quantizer.c" />
+    <ClCompile Include="..\..\..\..\src\quantization\src\quantizer.inline.c" />
+    <ClCompile Include="..\..\..\..\src\quantization\src\quantizercf.c" />
+    <ClCompile Include="..\..\..\..\src\quantization\src\quantizerf.c" />
+    <ClCompile Include="..\..\..\..\src\random\src\rand.c" />
+    <ClCompile Include="..\..\..\..\src\random\src\randexp.c" />
+    <ClCompile Include="..\..\..\..\src\random\src\randgamma.c" />
+    <ClCompile Include="..\..\..\..\src\random\src\randn.c" />
+    <ClCompile Include="..\..\..\..\src\random\src\randnakm.c" />
+    <ClCompile Include="..\..\..\..\src\random\src\randricek.c" />
+    <ClCompile Include="..\..\..\..\src\random\src\randweib.c" />
+    <ClCompile Include="..\..\..\..\src\random\src\scramble.c" />
+    <ClCompile Include="..\..\..\..\src\sequence\src\bsequence.c" />
+    <ClCompile Include="..\..\..\..\src\sequence\src\msequence.c" />
+    <ClCompile Include="..\..\..\..\src\utility\src\bshift_array.c" />
+    <ClCompile Include="..\..\..\..\src\utility\src\byte_utilities.c" />
+    <ClCompile Include="..\..\..\..\src\utility\src\msb_index.c" />
+    <ClCompile Include="..\..\..\..\src\utility\src\pack_bytes.c" />
+    <ClCompile Include="..\..\..\..\src\utility\src\shift_array.c" />
+    <ClCompile Include="..\..\..\..\src\utility\src\utility.c" />
+    <ClCompile Include="..\..\..\..\src\vector\src\vectorcf_add.port.c" />
+    <ClCompile Include="..\..\..\..\src\vector\src\vectorcf_mul.port.c" />
+    <ClCompile Include="..\..\..\..\src\vector\src\vectorcf_norm.port.c" />
+    <ClCompile Include="..\..\..\..\src\vector\src\vectorcf_trig.port.c" />
+    <ClCompile Include="..\..\..\..\src\vector\src\vectorf_add.port.c" />
+    <ClCompile Include="..\..\..\..\src\vector\src\vectorf_mul.port.c" />
+    <ClCompile Include="..\..\..\..\src\vector\src\vectorf_norm.port.c" />
+    <ClCompile Include="..\..\..\..\src\vector\src\vectorf_trig.port.c" />
+    <ClCompile Include="..\..\..\..\src\vector\src\vector_add.c" />
+    <ClCompile Include="..\..\..\..\src\vector\src\vector_mul.c" />
+    <ClCompile Include="..\..\..\..\src\vector\src\vector_norm.c" />
+    <ClCompile Include="..\..\..\..\src\vector\src\vector_trig.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\include\config.h" />
+    <ClInclude Include="..\..\..\..\include\liquid.h" />
+    <ClInclude Include="..\..\..\..\include\liquid.internal.h" />
+    <ClInclude Include="..\..\..\..\src\optim\src\optim.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\src\utility\src\msb_index.x86.s" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
